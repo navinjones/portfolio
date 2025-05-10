@@ -29,13 +29,14 @@ const HeroSection = () => {
   }, []);
   
   const downloadResume = () => {
-    // Create a link element
-    const link = document.createElement("a");
-    link.download = "Navin_Jones_Resume.pdf";
-    // You would need to add the actual resume file to your public folder
-    link.href = "https://github.com/navinjones/portfolio/blob/b526181699b41427c5f5904318ee74b3f2da667f/public/Navin_Jones_resume.pdf";
-    link.click();
-  };
+  const link = document.createElement("a");
+  link.download = "Navin_Jones_Resume.pdf";
+  link.href = "/Navin_Jones_resume.pdf"; // This assumes it's in the public/ directory
+  document.body.appendChild(link); // Ensure it's in the DOM for Firefox
+  link.click();
+  document.body.removeChild(link); // Clean up
+};
+
 
   return (
     <section
