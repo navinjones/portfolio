@@ -33,7 +33,7 @@ const HeroSection = () => {
     const link = document.createElement("a");
     link.download = "Navin_Jones_Resume.pdf";
     // You would need to add the actual resume file to your public folder
-    link.href = "/public/Navin_Jones_resume.pdf";
+    link.href = "public/Navin_Jones_resume.pdf";
     link.click();
   };
 
