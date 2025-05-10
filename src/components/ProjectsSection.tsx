@@ -9,6 +9,7 @@ const ProjectsSection = () => {
       title: "AI Passport Photo Maker",
       description: "An AI based intelligent photo processing application that creates passport-size photos from portraits, allowing background customization or replacement with an image.",
       tags: ["Roboflow", "MTCNN", "Streamlit"],
+      link: "https://photomaker.streamlit.app/",
     },
     {
       title: "Tailor Measurement Management System",
@@ -34,19 +35,31 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="glass-card hover-lift overflow-hidden">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-              </CardContent>
-              <CardFooter className="bg-theme-dark/30 p-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, idx) => (
-                  <Badge key={idx} variant="outline" className="bg-theme-purple/20 text-white border-theme-purple/20">
-                    {tag}
-                  </Badge>
-                ))}
-              </CardFooter>
-            </Card>
+            <a
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="glass-card hover-lift overflow-hidden">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
+                </CardContent>
+                <CardFooter className="bg-theme-dark/30 p-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag, idx) => (
+                    <Badge
+                      key={idx}
+                      variant="outline"
+                      className="bg-theme-purple/20 text-white border-theme-purple/20"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </CardFooter>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
