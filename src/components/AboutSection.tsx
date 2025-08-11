@@ -21,7 +21,7 @@ const AboutSection = () => {
               <Card className="glass-card">
                 <CardContent className="p-4">
                   <h4 className="font-medium text-lg">B.S. Abdur Rahman Crescent Institute of Science and Technology</h4>
-                  <p className="text-theme-gray-light">MCA - GPA: 7.43 (Till 3rd Sem)</p>
+                  <p className="text-theme-gray-light">MCA - GPA: 7.97</p>
                   <p className="text-sm text-theme-gray-light">2023 - 2025</p>
                 </CardContent>
               </Card>
